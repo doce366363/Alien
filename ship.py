@@ -16,7 +16,6 @@ class Ship():
 
         #сохранение вещественной координаты центра коробля
         self.x = float(self.rect.x)
-    
         #флаг перемещения
         self.moving_right = False
         self.moving_left = False
@@ -28,7 +27,7 @@ class Ship():
             self.x += self.settings.ship_speed
         if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed
-        # Обновление атрибута rect на основании self.x.
+            # Обновление атрибута rect на основании self.x.
         self.rect.x = self.x
     def blitme(self):
         """Рисует корабль в текущей позиции."""
